@@ -20,7 +20,17 @@ async.series([
       uno = res.leftScale.split('').map(Number);
       dos = res.rightScale.split('').map(Number);
 
-      callback(console.log(modules.quarterScale(uno, dos)));
+      if(res.leftScale.length === 1 && res.rightScale.length === 1 && res.leftScale[0] === res.rightScale[0]){
+        var value = modules.quarterScale(uno, dos);
+        if (value[0] === true && value[1] === true){
+          process.stdout.write('\n Congratulations! You did it!');
+          process.exit();
+        }else{
+          callback(console.log(modules.quarterScale(uno,dos)));
+        }
+      }else {
+        callback(console.log(modules.quarterScale(uno, dos)));
+      }
     });
 
   },
@@ -36,7 +46,17 @@ async.series([
       uno = res.leftScale.split('').map(Number);
       dos = res.rightScale.split('').map(Number);
 
-      callback(console.log(modules.quarterScale(uno, dos)));
+      if(res.leftScale.length === 1 && res.rightScale.length === 1 && res.leftScale[0] === res.rightScale[0]){
+        var value = modules.quarterScale(uno, dos);
+        if (value[0] === true && value[1] === true){
+          process.stdout.write('\n Congratulations! You did it!');
+          process.exit();
+        }else{
+          callback(console.log(modules.quarterScale(uno,dos)));
+        }
+      }else {
+        callback(console.log(modules.quarterScale(uno, dos)));
+      }
     });
   },
 
@@ -50,7 +70,17 @@ async.series([
       uno = res.leftScale.split('').map(Number);
       dos = res.rightScale.split('').map(Number);
 
-      callback(console.log(modules.quarterScale(uno, dos)));
+      if(res.leftScale.length === 1 && res.rightScale.length === 1 && res.leftScale[0] === res.rightScale[0]){
+        var value = modules.quarterScale(uno, dos);
+        if (value[0] === true && value[1] === true){
+          process.stdout.write('\n Congratulations! You did it!');
+          process.exit();
+        }else{
+          callback(console.log(modules.quarterScale(uno,dos)));
+        }
+      }else {
+        callback(console.log(modules.quarterScale(uno, dos)));
+      }
     });
   }
 
