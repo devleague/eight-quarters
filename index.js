@@ -5,7 +5,10 @@ var modules = require('./script');
 
 var quarters = [1,1,1,1,1,1,1,1];
 
+function game(){
+
 async.series([
+
   function(callback){
     prompt.start();
 
@@ -87,10 +90,14 @@ async.series([
   ],
   function(err, results){
     console.log('you have ran out of tries! Please try again!');
+    return game();
   });
+}
 
 
 function onErr(err){
   console.log(err);
   return 1;
 }
+
+game();
