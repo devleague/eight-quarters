@@ -4,12 +4,14 @@ An logic exercise to find the least amount of times you can split 8 quarters and
 
 ### Installation
 
-Use `npm install` to install the dependencies. Then run `nodemon server.js`.
+`npm install` for dependencies
 
 ### How to use
 
-You'll be using Postman to make a `GET` request at `localhost:8080/quarters` using two parameters `first` and `second`. Each take in numbers seperated by commas, for ex. `1,2,3`.
+```
+node index.js
+```
 
-Your goal is to find which index in the quarter array is the odd-one-out. You have 3 tries, but if you can do it in 2, you've solved the logic problem!
+You will receive two prompts: *Left Scale* and *Right Scale* in which you will "digitally" place your quarters numbered from 1 to 8 on top to check which is heavier. Find the quarter that is the odd one out! You have 3 tries. Try to do it in 2!
 
-After 3 tries, the quarter array will reset and randomize itself.
+On the third try, the quarters will mix itself up forcing you to start again.
